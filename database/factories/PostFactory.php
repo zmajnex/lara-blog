@@ -17,10 +17,12 @@ class PostFactory extends Factory
 
               return [
                   'user_id'=>$this->faker->numberBetween([0,100]),
-                  'title' => $this->faker->sentence(),
+                  'title' => $this->faker->sentence(12),
                   'slug'=>$this->faker->unique()->slug(),
                   'description' => $this->faker->realText(),
-                  'list_image'=>$this->faker->imageUrl()
+                  'list_image'=>$this->faker->imageUrl(),
+                   'post_image'=>$this->faker->imageUrl(),
+                  'short_description'=>$this->faker->sentence(6)
               ];
 
     }
