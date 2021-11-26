@@ -38,5 +38,6 @@
     </div>
 </nav>
 @yield('content')
+@yield('posts')
 </body>
 </html>
