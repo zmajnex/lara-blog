@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('pages.home');
 });
 Route::get('/posts', function (Post $post) {
-    $articles = Post::paginate(15);
+    $articles = Post::paginate(5);
     return view('posts',['articles'=>$articles]);
 });

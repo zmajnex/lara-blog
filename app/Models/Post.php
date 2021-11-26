@@ -9,4 +9,5 @@ class Post extends Model
 {
     use HasFactory;
     protected $filable = ['id'];
+    protected $dates = ['created_at'];
 }

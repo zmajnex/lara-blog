@@ -1,15 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <script src="{{asset('js/app.js')}}"></script>
-    <title>Blog home page</title>
-</head>
-<body>
 <nav class="bg-white shadow mb-10">
     <div x-data="{isOpen:false}" class="py-3 px-6 md:px-0 md:flex md:justify-between">
         <div class="flex justify-between items-center">
@@ -37,7 +25,3 @@
         </div>
     </div>
 </nav>
-@yield('content')
-@yield('posts')
-</body>
-</html>
