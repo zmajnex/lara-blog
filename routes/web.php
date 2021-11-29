@@ -20,4 +20,8 @@ Route::get('/', function () {
 Route::get('/posts', function (Post $post) {
     $articles = Post::paginate(5);
     return view('posts',['articles'=>$articles]);
-});
+})->name('posts');
+Route::get('/{post:slug}', function (Post $post ) {
+    //$post = Post::find($id);
+    return view('post',['post'=>$post]);
+})->name('post');

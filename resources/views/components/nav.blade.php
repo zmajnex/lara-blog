@@ -15,8 +15,8 @@
         {{--Menu if mobile is set to hidden--}}
         <div :class="isOpen ? 'show' : 'hidden'" class="md:flex md:block items-center">
             <div class="flex flex-col mt-5 md:mt-0 md:flex-row md:ml-6">
-                <a class=" cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Home</a>
-                <a class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">About</a>
+                <a href="/" class=" cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Home</a>
+                <a href="/posts" class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">All Articles</a>
                 <a class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Contact</a>
                 <a class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Login</a>
                 <a class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Register</a>
