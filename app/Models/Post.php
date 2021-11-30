@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $filable = ['id'];
-    protected $dates = ['created_at'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+}
 }

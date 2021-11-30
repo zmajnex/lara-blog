@@ -22,7 +22,9 @@ class PostFactory extends Factory
                   'description' => $this->faker->realText(),
                   'list_image'=>$this->faker->imageUrl(),
                    'post_image'=>$this->faker->imageUrl(),
-                  'short_description'=>$this->faker->sentence(6)
+                  'short_description'=>$this->faker->sentence(6),
+                  'category_id'=>$this->faker->numberBetween(1,5),
+                  'tag_id'=>$this->faker->numberBetween(1,10)
               ];
 
     }

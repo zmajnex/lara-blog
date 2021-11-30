@@ -16,6 +16,13 @@
             <div class="containier mt-20 text-center">
             {{$post->description}}
             </div>
+            <div class="flex items-center mt-10 justify-end mb-3 last:mb-0">
+                <img height="48" width="48" class="border-white border-2" src="https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY" alt="Sage Kirk">
+                <div>
+                    <span class="font-medium text-sm ml-1 block">Created by:{{$post->user_id}}</span>
+                    <a class="text-sm ml-1 block text-green-400" href="#">@twitter_username</a>
+                </div>
+            </div>
         </div>
     </div>
 </x-layout>

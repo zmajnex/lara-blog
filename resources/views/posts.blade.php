@@ -22,20 +22,20 @@
                         </div>
                         <div class="text-sm font-medium text-gray-700">{{$article->created_at->format('d M Y')}}</div>
                     </div>
-                    <a href="{{$article->slug}}" class="hover:text-green-400">
+                    <a href="{{url($article->slug)}}" class="hover:text-green-400">
                         <h2 class="text-2xl font-semibold mb-1">{{$article->title}}</h2>
                     </a>
                     <p class="text-base font-light text-gray-600 mb-4">{{$article->short_description}}</p>
                     {{--Tags--}}
                     <div class="mb-2">
-                        <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="/category/development">Development</a>
+                        <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="categories/{{$article->category->category_name}}">{{$article->category->category_name}}</a>
                     </div>
                 </div>
             </div>
         </div>
     @endforeach
 </main>
-{{ $articles->links()}}
+{{--{{ $articles->links()}}--}}
     </div>
 </x-layout>
 

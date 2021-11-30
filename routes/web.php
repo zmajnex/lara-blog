@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -17,11 +18,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.home');
 });
-Route::get('/posts', function (Post $post) {
-    $articles = Post::paginate(5);
-    return view('posts',['articles'=>$articles]);
+
+Route::get('/posts', function () {
+    //dd(Post::paginate(5)->all());
+    return view('posts',['articles'=> Post::all()]);
 })->name('posts');
+
 Route::get('/{post:slug}', function (Post $post ) {
-    //$post = Post::find($id);
     return view('post',['post'=>$post]);
 })->name('post');
+
+// Get all posts in category
+Route::get('categories/{category:category_name}', function (Category $category ) {
+    return view('posts',['articles'=>$category->posts]);
+})->name('categories');

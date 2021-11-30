@@ -26,10 +26,9 @@ class DatabaseSeeder extends Seeder
         Category::factory(5)->create();
         User::factory(3)->create();
         Tag::factory(15)->create();
-        Post::factory(5)->create(
+        Post::factory(20)->create(
             [
-                'user_id'=> 1,
-                'category_id'=>2
+                'user_id'=> 1
             ]);
         Role::create([
             'id'=>1,
