@@ -26,9 +26,14 @@
                         <h2 class="text-2xl font-semibold mb-1">{{$article->title}}</h2>
                     </a>
                     <p class="text-base font-light text-gray-600 mb-4">{{$article->short_description}}</p>
-                    {{--Tags--}}
+                    {{--Category--}}
                     <div class="mb-2">
-                        <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="categories/{{$article->category->category_name}}">{{$article->category->category_name}}</a>
+                        <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-green-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="{{route('categories',$article->category->category_name)}}">{{$article->category->category_name}}</a>
+                    </div>
+                    <div class="mb-2">
+                        @foreach($article->tag as $item)
+                        <a class="p-1 px-3 mr-1 mb-1 inline-block text-xs font-mono rounded bg-blue-200 text-green-800 hover:bg-blue-200 hover:text-blue-800 transition duration-300 ease-in-out" href="{{route('tags',$item->tag_name) }}">{{$item->tag_name}}</a>
+                        @endforeach
                     </div>
                 </div>
             </div>

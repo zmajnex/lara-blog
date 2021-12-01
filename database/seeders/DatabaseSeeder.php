@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\PostTag;
 use App\Models\Role;
 use App\Models\Tag;
 use App\Models\User;
@@ -18,15 +19,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
+        /*User::truncate();
         Post::truncate();
         Role::truncate();
         Category::truncate();
         Tag::truncate();
         Category::factory(5)->create();
         User::factory(3)->create();
-        Tag::factory(15)->create();
-        Post::factory(20)->create(
+        Tag::factory(15)->create();*/
+        PostTag::factory(30)->create();
+        /*Post::factory(20)->create(
             [
                 'user_id'=> 1
             ]);
@@ -44,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'id'=>3,
             'role_name'=>'user',
             'created_at'=>now()
-        ]);
+        ]);*/
 
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,15 +21,19 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', function () {
-    //dd(Post::paginate(5)->all());
     return view('posts',['articles'=> Post::all()]);
 })->name('posts');
 
 Route::get('/{post:slug}', function (Post $post ) {
+
     return view('post',['post'=>$post]);
 })->name('post');
 
 // Get all posts in category
-Route::get('categories/{category:category_name}', function (Category $category ) {
+Route::get('/categories/{category:category_name}', function (Category $category ) {
     return view('posts',['articles'=>$category->posts]);
 })->name('categories');
+// Get all post tagged
+Route::get('/tags/{tag:tag_name}', function (Tag $tag ) {
+    return view('posts',['articles'=>$tag->post]);
+})->name('tags');
