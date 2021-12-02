@@ -37,3 +37,7 @@ Route::get('/categories/{category:category_name}', function (Category $category 
 Route::get('/tags/{tag:tag_name}', function (Tag $tag ) {
     return view('posts',['articles'=>$tag->post]);
 })->name('tags');
+
+Route::get('admin/dash/', function () {
+    return view('admin.dashboard');
+});
