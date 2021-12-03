@@ -1,5 +1,59 @@
-{{--@include('layouts.app')--}}
+
 <x-layout>
+ {{--SEO--}}
+    @section('language',$language ?? 'en')
+    @section('title',$title ?? 'Default title')
+    @section('description',$description ?? 'Default description')
+    @section('canonical_url',$canonicalUrl?? 'Default url')
+    @section('og_title',$ogTitle ?? 'Default OG title')
+    @section('og_description',$ogDescription ?? 'Default OG URL')
+    @section('og_url',$ogUrl ?? 'Default title')
+    @section('og_sitename',$ogSitename ?? 'Default sitename')
+    @section('og_image',$ogImageUrl ?? 'Default og image')
+    @section('og_secure_image',$ogSecureImageUrl ?? 'Default secure image url')
+    @section('tw_description',$twitterDescription ?? 'Default twitter description')
+    @section('tw_title',$twitterTitle ?? 'Default twitter title')
+    @section('tw_image',$twitterImageUrl ?? 'Default twitter image')
+     @section('structured_data')
+        {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+        "@type": "WebSite",
+        "@id": "",
+        "url": "",
+        "name": "A",
+        },
+        {
+        "@type": "ImageObject",
+        "@id": "",
+        "url": "",
+        "width": 485,
+        "height": 436
+        },
+        {
+        "@type": "WebPage",
+        "@id": "",
+        "url": "",
+        "inLanguage": "{{$language ?? 'en'}} ",
+        "name": "",
+        "isPartOf": {
+        "@id": ""
+        },
+        "primaryImageOfPage": {
+        "@id": ""
+        },
+        "datePublished": "2019-12-17T15:02:58+00:00",
+        "dateModified": "2021-10-22T08:51:26+00:00",
+        "description": ""
+        }
+        ]
+        }
+         @endsection
+    {{--Custom code--}}
+    @section('custom_code')
+        <script>console.log('Hi there!')</script>
+        @endsection
     <div class="container mx-auto px-6 md:px-4">
     <div class="mt-10 py-6 md:py-12 lg:w-10/12 ">
         <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight"><em>Proton Blog</em>  Articles</h1>

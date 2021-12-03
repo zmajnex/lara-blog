@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="@yield('language')">
 <x-head></x-head>
 <body>
+<x-custom-code></x-custom-code>
 <x-nav></x-nav>
 <div>
     {{$slot}}
