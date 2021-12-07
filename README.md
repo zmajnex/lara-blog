@@ -1,4 +1,4 @@
-#Laravel 8 Blog - dev stage   
+# Laravel 8 Blog - dev stage   
 Tailwindcss and alpine.js
 ## Installation:
 ````
