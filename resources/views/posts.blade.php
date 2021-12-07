@@ -1,7 +1,7 @@
 
 <x-layout>
  {{--SEO--}}
-    @section('language',$language ?? 'en')
+    @section('language',$language ?? config('app.locale'))
     @section('title',$title ?? 'Default title')
     @section('description',$description ?? 'Default description')
     @section('canonical_url',$canonicalUrl?? 'Default url')
@@ -22,7 +22,7 @@
         "@type": "WebSite",
         "@id": "",
         "url": "",
-        "name": "A",
+        "name": "{{config('app.name')}}",
         },
         {
         "@type": "ImageObject",
@@ -35,7 +35,7 @@
         "@type": "WebPage",
         "@id": "",
         "url": "",
-        "inLanguage": "{{$language ?? 'en'}} ",
+        "inLanguage": "{{$language ?? config('app.locale')}}",
         "name": "",
         "isPartOf": {
         "@id": ""

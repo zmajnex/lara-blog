@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('pages.home');
-});
+})->name('home');
 
 Route::get('/posts', function () {
     return view('posts',['articles'=> Post::all()]);
@@ -40,4 +40,4 @@ Route::get('/tags/{tag:tag_name}', function (Tag $tag ) {
 
 Route::get('admin/dash/', function () {
     return view('admin.dashboard');
-});
+})->name('dash');

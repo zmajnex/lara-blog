@@ -18,6 +18,7 @@
                 <a href="/" class=" cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Home</a>
                 <a href="/posts" class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">All Articles</a>
                 <a class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Contact</a>
+                <a href="{{route('dash')}}" class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Admin</a>
                 <a class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Login</a>
                 <a class="cursor-pointer my-1 text-sm text-grey-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0">Register</a>
 
