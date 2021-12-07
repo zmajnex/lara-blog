@@ -23,7 +23,7 @@ php artisan migrate
 
 php artisan db:seed --class=DatabaseSeeder
 ````
-## Features (not complete)
+## Features (in progress)
 
 1. Add, delete and edit posts
 2. Add, delete and edit categories
@@ -37,7 +37,7 @@ php artisan db:seed --class=DatabaseSeeder
 
 ### Admin panel
 ![Laravel 8 blog](./admindashboard-laravel8.jpeg?raw=true "Admin dashboard")
-###All articles page
+### All articles page
 ![All posts](./all-articles.jpeg?raw=true "All posts")
 ### Post page
 ![All posts](./post.jpeg?raw=true "Post page ")
