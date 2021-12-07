@@ -34,3 +34,12 @@ php artisan db:seed --class=DatabaseSeeder
 7. Structured data
 8. Inserting custom code and scripts(Google tag manager, facebook pixel etc.)
 9. Admin panel
+
+###Admin panel
+![Laravel 8 blog](./admindashboard-laravel8.jpeg?raw=true "Admin dashboard")
+###All articles page
+![All posts](./all-articles.jpeg?raw=true "All posts")
+###Post page
+![All posts](./post.jpeg?raw=true "Post page ")
+
+![Post page bottom](./post-part2.jpeg?raw=true "Post page bottom")
