@@ -13,14 +13,20 @@ npm install
 ````
 npm run watch
 ````
+````
+php artisan migrate
+````
+### Create super user using artisan command
+
+````
+php artisn user:create
+````
 ### Dummy data
 
 Setup DB credentials in .env file
 
 Run in terminal:
 ````
-php artisan migrate
-
 php artisan db:seed --class=DatabaseSeeder
 ````
 ## Features (in progress)
