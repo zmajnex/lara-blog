@@ -3,25 +3,26 @@
 <x-head>
 
 </x-head>
-<body class="admin">
+<body class="admin" >
     <main class="flex">
-        <aside style="background-image: linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%)" class="inline-block bg-indigo-800 text-white w-64 h-screen ">
+        <div x-data="{sidebarMenu : false}">
+        <aside  style="background-image: linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%)" class="inline-block text-white  bg-indigo-800 transition duration-700 ease-out w-64 h-screen relative " :class="{'w-32': sidebarMenu, 'w-64': !sidebarMenu}">
             <div class="logo border-b-2 flex p-4 justify-between">
         <span><a href="{{route('home')}}"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
 </svg></a></span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button @click="sidebarMenu = !sidebarMenu" style="background-image: linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%)" class="absolute -right-3 top-4 rounded-full"><svg xmlns="http://www.w3.org/2000/svg"  :class="{'rotate-180': sidebarMenu}" class=" transform h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
-</svg></span>
+</svg></button>
             </div>
-            <div class="nav">
+            <div class="nav ">
                 <ul class="mx-2 p-2 ">
                     <li class="my-4 flex"><span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
 </svg></span><a class="hover:text-gray-400 pl-2" href="">Pages </a></li>
                     <li class="my-4 flex"><span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-</svg></span><a class="hover:text-gray-400 pl-2" href="">Posts </a></li>
+</svg></span><a href="{{route('admin-posts')}}" class="hover:text-gray-400 pl-2" href="">Posts </a></li>
                     <li class="my-4  flex"><span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-current text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
 </svg></span><a class="hover:text-gray-400 pl-2" href="">Tags</a></li>
@@ -44,9 +45,11 @@
                     </ul>
             </div>
         </aside>
+        </div>
         <div class=" block flex-grow ">
 
             <div x-data="{isOpen:false}" class="py-3 px-6 md:px-0 md:flex md:justify-between">
+
                 <div class="flex justify-end items-center">
                     {{--Mobile menu button--}}
                     <div class="flex md:hidden">

@@ -44,3 +44,6 @@ Route::get('admin/dash/', function () {
 Route::get('admin/settings/', function () {
     return view('admin.settings');
 })->name('settings');
+Route::get('admin/posts/', function () {
+    return view('admin.posts');
+})->name('admin-posts');
