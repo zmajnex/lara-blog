@@ -41,3 +41,6 @@ Route::get('/tags/{tag:tag_name}', function (Tag $tag ) {
 Route::get('admin/dash/', function () {
     return view('admin.dashboard');
 })->name('dash');
+Route::get('admin/settings/', function () {
+    return view('admin.settings');
+})->name('settings');
