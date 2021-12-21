@@ -8,13 +8,22 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     /**
+     * Display a listing of the resource in admin panel.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function indexAdmin()
+    {
+        return view('admin.posts',['articles'=> Post::with('user')->get()]);
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('posts',['articles'=> Post::all()]);
+        return view('posts',['articles'=> Post::with('category')->with('tag')->get()]);
     }
 
     /**

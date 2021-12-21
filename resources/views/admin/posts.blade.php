@@ -5,6 +5,7 @@
     </div>
 <div class=" container ">
         <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800 overflow-x-auto">
+
             <tr class="text-left border-b-2 border-gray-300">
                 <th class="px-4 py-3">#</th>
                 <th class="px-4 py-3">id</th>
@@ -15,13 +16,14 @@
                 <th class="px-4 py-3">Edit</th>
                 <th class="px-4 py-3">Delete</th>
             </tr>
+            @foreach($articles as $article)
             <tr class="bg-gray-100 border-b border-gray-200">
                 <td class="px-4 py-3"><input type="checkbox"></td>
-                <td class="px-4 py-3">1</td>
-                <td class="px-4 py-3">Hic nemo voluptatibus a nobis sed rerum recusandae fugiat esse sapiente et ut</td>
-                <td class="px-4 py-3">John Doe</td>
+                <td class="px-4 py-3">{{$article->id}}</td>
+                <td class="px-4 py-3">{{$article->title}}</td>
+                <td class="px-4 py-3">{{$article->user->name}}</td>
                 <td class="px-4 py-3">published </td>
-                <td class="px-4 py-3">13-5-2021</td>
+                <td class="px-4 py-3">{{$article->created_at}}</td>
                 <td class="px-4 py-3 ">
                     <a href="" class="text-white bg-green-700" ><svg xmlns="http://www.w3.org/2000/svg" class=" stroke-current stroke-1 text-green-600 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -34,6 +36,7 @@
                     </svg></a>
                 </td>
             </tr>
+                @endforeach
         </table>
 </div>
 </x-admin-layout>
