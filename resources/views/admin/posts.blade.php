@@ -1,7 +1,7 @@
 <x-admin-layout>
     <div class="mx-auto w-5/6 flex flex-col justify-between md:flex-row  mt-2 ">
         <h2 class="text-xl mb-4">All Posts </h2>
-        <a href="#" class="bg-blue-400 text-white hover:bg-blue-600 md:inline-block py-2 px-6">Add new post</a>
+        <a href="{{route('posts.create',null)}}" class="bg-blue-400 text-white hover:bg-blue-600 md:inline-block py-2 px-6">Add new post</a>
     </div>
 <div class=" container ">
         <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800 overflow-x-auto">
@@ -16,6 +16,7 @@
                 <th class="px-4 py-3">Edit</th>
                 <th class="px-4 py-3">Delete</th>
             </tr>
+            @if ($articles)
             @foreach($articles as $article)
             <tr class="bg-gray-100 border-b border-gray-200">
                 <td class="px-4 py-3"><input type="checkbox"></td>
@@ -37,6 +38,7 @@
                 </td>
             </tr>
                 @endforeach
+                @endif
         </table>
 </div>
 </x-admin-layout>

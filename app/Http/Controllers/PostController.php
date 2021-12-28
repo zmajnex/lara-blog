@@ -15,6 +15,7 @@ class PostController extends Controller
     public function indexAdmin()
     {
         return view('admin.posts',['articles'=> Post::with('user')->get()]);
+
     }
     /**
      * Display a listing of the resource.
@@ -33,7 +34,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.add-post');
     }
 
     /**
