@@ -71,7 +71,16 @@
             </div>
             <div class="my-2 px-4">
                 <label class="w-full text-2xl" for="title">Add blog post</label>
-                <textarea class="w-full leading-9 h-32 border border-blue-200  my-4 px-2" type="text" name="description"></textarea>
+                <textarea id="tinymce" class="w-full leading-9 h-32 border border-blue-200  my-4 px-2" type="text" name="description"></textarea>
+            </div>
+            <h2 class="w-full text-center text-4xl my-4 ">SEO</h2>
+            <div class="my-2 px-4">
+                <label class="w-full text-2xl" for="title">Add meta title</label>
+                <input class="w-full leading-9 border border-blue-200 my-4 px-2" type="text" name="metaTitle">
+            </div>
+            <div class="my-2 px-4">
+                <label class="w-full text-2xl" for="title">Add meta description</label>
+                <input class="w-full leading-9 border border-blue-200 my-4 px-2" type="text" name="metaDescription">
             </div>
         </form>
     </div>

@@ -26,7 +26,9 @@
     <meta name="twitter:image" content="@yield('tw_image')" />
     <script type='application/ld+json' >@yield('structured_data')</script>
     <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/tinymce.min.js')}}"></script>
     <script src="{{asset('js/admin.js')}}"></script>
+
 
     <title>@yield('title')</title>
 </head>

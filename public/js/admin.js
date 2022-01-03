@@ -24,3 +24,9 @@ function showBlogPostImage() {
         }
     }
 }
+ tinymce.init({
+    selector: 'textarea#tinymce',
+    height: 200,
+     plugins: "link image code",
+     toolbar: 'undo redo | styleselect | forecolor | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | code'
+})
