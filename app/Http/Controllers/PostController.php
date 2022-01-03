@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class PostController extends Controller
 {
@@ -34,7 +36,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.add-post');
+        return view('admin.add-post',['categories'=>Category::all()]);
     }
 
     /**

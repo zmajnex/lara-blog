@@ -11,6 +11,18 @@
                 <label class="w-full text-2xl" for="title">Add seo friendly url</label>
                 <input class="w-full leading-9 border border-blue-200  my-4 px-2" type="text" name="slug">
             </div>
+            <div class="my-2 px-4">
+                <label class="w-full text-2xl" for="title">Select category</label>
+                <select class="w-full leading-9 border border-blue-200 bg-white  my-4 px-2 py-2" type="text" name="categories">
+                    @if ($categories)
+                        @foreach($categories as $category)
+                    <option class="py-4 " value="test">{{$category->category_name}}</option>
+                        @endforeach
+                    @else
+                        <option class="py-4 " value="test">No categories!</option>
+                    @endif
+                </select>
+            </div>
             <div class="flex px-4 justify-evenly">
                 <div x-data="showBlogListImage()" class="flex items-center justify-center  bg-gray-200">
                     <div class="bg-white rounded-lg shadow-xl">
